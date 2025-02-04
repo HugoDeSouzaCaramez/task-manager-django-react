@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("POSTGRES_DB"),
-        'USER': os.getenv("POSTGRES_USER"),
-        'PASSWORD': os.getenv("POSTGRES_PASSWORD"),
-        'HOST': 'db',  # Ou o IP do PostgreSQL
-        'PORT': '5432',
+        'NAME': os.getenv("POSTGRES_DB", "taskmanager"),
+        'USER': os.getenv("POSTGRES_USER", "postgres"),
+        'PASSWORD': os.getenv("POSTGRES_PASSWORD", "postgres"),
+        'HOST': os.getenv("POSTGRES_HOST", "localhost"),  # Altere o default para 'localhost'
+        'PORT': os.getenv("POSTGRES_PORT", "5432"),
     }
 }
 
