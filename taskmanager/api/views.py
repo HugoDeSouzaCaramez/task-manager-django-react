@@ -1,4 +1,3 @@
-# tasks/views.py
 from rest_framework import viewsets, permissions
 from .models import Task
 from .serializers import TaskSerializer
