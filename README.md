@@ -8,4 +8,6 @@ docker-compose exec taskmanager python manage.py loaddata seed_data.json
 
 docker-compose exec taskmanager python manage.py seed
 
+docker-compose exec taskmanager python manage.py test
+
 npm run start

@@ -34,13 +34,11 @@ class Command(BaseCommand):
         # Criar tarefas
         tasks = [
             {
-                'user': common_user,
                 'title': 'Django',
                 'description': 'seeds',
                 'is_completed': False
             },
             {
-                'user': common_user,
                 'title': 'Fazer compras',
                 'description': 'Comprar itens essenciais',
                 'is_completed': True

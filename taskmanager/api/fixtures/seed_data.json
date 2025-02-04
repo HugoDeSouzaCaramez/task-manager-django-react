@@ -16,7 +16,6 @@
         "model": "api.task",
         "pk": 1,
         "fields": {
-            "user": 1,
             "title": "Django",
             "description": "fixtures",
             "is_completed": false,
