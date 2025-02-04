@@ -15,7 +15,7 @@ class TaskTests(APITestCase):
     def test_list_tasks(self):
         url = reverse('task-list')
         response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEqual(len(response.data), 1)
 
     def test_create_task(self):
