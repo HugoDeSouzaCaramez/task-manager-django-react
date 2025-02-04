@@ -11,3 +11,5 @@ docker-compose exec taskmanager python manage.py seed
 docker-compose exec taskmanager python manage.py test
 
 npm run start
+
+npm test TaskList.test.tsx

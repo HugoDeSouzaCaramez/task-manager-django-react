@@ -15,12 +15,16 @@ const TaskList: React.FC = () => {
 
     return (
         <div>
-            {tasks.map(task => (
-                <div key={task.id}>
-                    <h3>{task.title}</h3>
-                    <p>{task.description}</p>
-                </div>
-            ))}
+            {tasks.length === 0 ? (
+                <p>Nenhuma tarefa encontrada.</p>
+            ) : (
+                tasks.map(task => (
+                    <div key={task.id}>
+                        <h3>{task.title}</h3>
+                        <p>{task.description}</p>
+                    </div>
+                ))
+            )}
         </div>
     );
 };
