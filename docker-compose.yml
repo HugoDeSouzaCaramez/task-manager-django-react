@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres:14
+    #environment:
+      #POSTGRES_DB: ${POSTGRES_DB}
+      #POSTGRES_USER: ${POSTGRES_USER}
+      #POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - ./taskmanager/.env  # Adicione esta linha
+
+  taskmanager:
+    build: 
+      context: ./taskmanager
+      dockerfile: Dockerfile
+    #environment:
+      #- POSTGRES_DB=${POSTGRES_DB}
+      #- POSTGRES_USER=${POSTGRES_USER}
+      #- POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports:  # Adicione esta seção
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - ./taskmanager/.env  # Adicione esta linha
+
+  #frontend:
+    #build:
+      #context: ./frontend
+      #dockerfile: Dockerfile
+    #ports:
+      #- "80:80"
+    #depends_on:
+      #- taskmanager
+
+volumes:
+  postgres_data:

@@ -1,0 +1,62 @@
+# .gitignore para Django
+
+# Ambiente virtual
+venv/
+.venv/
+ENV/
+env/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Arquivos do IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+*.log
+local_settings.py
+
+# Migrações (opcional - não ignore se estiver versionando migrações)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# Node.js (se usar ferramentas frontend como Webpack/React)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+docker-compose.override.yml
+.env.docker
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Banco de dados (se usar outros além do SQLite)
+*.dump
+*.backup
+
+# Testes
+.pytest_cache/
+test_results/
