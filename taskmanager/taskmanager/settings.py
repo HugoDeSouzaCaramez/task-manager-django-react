@@ -86,8 +86,11 @@ DATABASES = {
         'NAME': os.getenv("POSTGRES_DB", "taskmanager"),
         'USER': os.getenv("POSTGRES_USER", "postgres"),
         'PASSWORD': os.getenv("POSTGRES_PASSWORD", "postgres"),
-        'HOST': os.getenv("POSTGRES_HOST", "localhost"),  # Altere o default para 'localhost'
+        'HOST': os.getenv("POSTGRES_HOST", "localhost"),
         'PORT': os.getenv("POSTGRES_PORT", "5432"),
+        'TEST': {
+            'NAME': 'test_taskmanager',  # Nome do banco de testes
+        },
     }
 }
 

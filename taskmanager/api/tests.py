@@ -5,6 +5,7 @@ from .models import Task
 
 class TaskTests(APITestCase):
     def setUp(self):
+        super().setUp()
         self.task = Task.objects.create(
             title='Tarefa Inicial',
             description='Descrição da tarefa inicial',

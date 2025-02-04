@@ -58,10 +58,10 @@ jobs:
         echo "PostgreSQL não iniciou a tempo"
         exit 1
 
-    - name: Run Django migrations
-      working-directory: ./taskmanager
-      run: |
-        python manage.py migrate
+    #- name: Run Django migrations
+      #working-directory: ./taskmanager
+      #run: |
+        #python manage.py migrate
 
     - name: Run Django tests
       working-directory: ./taskmanager
